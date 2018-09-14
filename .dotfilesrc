@@ -1,0 +1,4 @@
+[dotfiles]
+prefix = .
+repository = /home/richard/Programs/shell/dotfiles
+packages = ['config', 'vim', 'ncmpcpp']
