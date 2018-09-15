@@ -116,11 +116,11 @@ bindsym $mod+shift+x exec lock --lock
 bindsym $mod+space exec chromium
 
 # Hardware controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id lmc up 5
-bindsym XF86AudioLowerVolume exec --no-startup-id lmc down 5
-bindsym XF86AudioMute exec --no-startup-id lmc mute
-bindsym XF86MonBrightnessDown exec --no-startup-id brightness -dec 4
-bindsym XF86MonBrightnessUp exec --no-startup-id brightness -inc 4
+bindsym XF86AudioRaiseVolume exec --no-startup-id proxy_audio up 5
+bindsym XF86AudioLowerVolume exec --no-startup-id proxy_audio down 5
+bindsym XF86AudioMute exec --no-startup-id proxy_audio mute
+bindsym XF86MonBrightnessDown exec --no-startup-id proxy_brightness -dec 4
+bindsym XF86MonBrightnessUp exec --no-startup-id proxy_brightness -inc 4
 
 exec --no-startup-id setxkbmap -option caps:escape
 exec --no-startup-id xset r rate 300 25
@@ -139,5 +139,5 @@ exec --no-startup-id compton -b -D 1 --xrender-sync-fence
 exec --no-startup-id mpd
 exec --no-startup-id bash -c 'sleep 1; pulseaudio --kill; pulseaudio -start'
 exec --no-startup-id i3mpdupdate
-exec_always --no-startup-id sh -c 'sleep 1; xrdb ~/.Xresources'
+exec_always --no-startup-id sleep 1 && xrdb ~/.Xresources
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
