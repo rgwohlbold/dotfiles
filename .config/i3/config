@@ -112,7 +112,7 @@ bindsym $mod+n exec $term -e neomutt
 bindsym $mod+i exec $term -e ranger
 
 bindsym $mod+d exec rofi -show run
-bindsym $mod+shift+x exec dolock --lock
+bindsym $mod+shift+x exec lock --lock
 bindsym $mod+space exec chromium
 
 # Hardware controls
