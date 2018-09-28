@@ -3,12 +3,12 @@
 set $mod Mod4
 floating_modifier $mod
 set $term --no-startup-id urxvt
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 
 gaps outer 0
-gaps inner 0
-default_border pixel 3
-default_floating_border pixel 3
+gaps inner 6
+default_border pixel 0
+default_floating_border pixel 0
 
 
 # Bar
@@ -108,7 +108,7 @@ bindsym $mod+shift+d exec --no-startup-id ask-display
 
 bindsym $mod+Return exec $term
 bindsym $mod+m exec $term -e ncmpcpp
-bindsym $mod+n exec $term -e neomutt 
+bindsym $mod+n exec thunderbird
 bindsym $mod+i exec $term -e ranger
 
 bindsym $mod+d exec rofi -show run
@@ -135,7 +135,7 @@ exec --no-startup-id gnome-screensaver
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 HorizEdgeScroll=1 VertScrollDelta=-111
 exec --no-startup-id update_wallpaper --fast
 exec --no-startup-id nm-applet
-exec --no-startup-id compton -b -D 1 --xrender-sync-fence
+exec --no-startup-id compton -b -D 1 --xrender-sync-fence --config ~/.config/compton/compton.conf
 exec --no-startup-id mpd
 exec --no-startup-id bash -c 'sleep 1; pulseaudio --kill; pulseaudio -start'
 exec --no-startup-id i3mpdupdate
