@@ -34,6 +34,8 @@ URxvt.background:	        [90]#111111
 URxvt*scrollBar:            false
 URxvt*foreground:           #c6c6c6
 URxvt*cursorColor:	        white
+URxvt.fading: 20
+
 
 !! copy/paste
 URxvt.keysym.M-c:           perl:clipboard:copy
